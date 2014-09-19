@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>TorrentLibTests</Name>
+    <ProjectGuid>32e30b92-29fe-4eda-bd74-d8d855da0399</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TorrentLibTests</RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>TorrentLibTests</AssemblyName>
+    <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+    <Server>Custom</Server>
+    <CustomServerUrl>http://labs.erayan.com/torrentlibtests</CustomServerUrl>
+    <PublishEvent>BeforeRun</PublishEvent>
+    <PublishBeforeDebugProfile>EraYaN Labs</PublishBeforeDebugProfile>
+    <PHPDevAutoPort>True</PHPDevAutoPort>
+    <PHPDevPort>3274</PHPDevPort>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <IISProjectUrl>http://localhost:3274/</IISProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="index.php" />
+    <Compile Include="php-bittorrent-develop\PHP\BitTorrent\Decoder.php" />
+    <Compile Include="php-bittorrent-develop\PHP\BitTorrent\DecoderInterface.php" />
+    <Compile Include="php-bittorrent-develop\PHP\BitTorrent\Encoder.php" />
+    <Compile Include="php-bittorrent-develop\PHP\BitTorrent\EncoderInterface.php" />
+    <Compile Include="php-bittorrent-develop\PHP\BitTorrent\Torrent.php" />
+    <Compile Include="PHPTracker-0.3\example_announce.php" />
+    <Compile Include="PHPTracker-0.3\example_seeder.php" />
+    <Compile Include="PHPTracker-0.3\example_torrent_creator.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Autoloader.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Builder.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Error\Build.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Error\InvalidType.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Error\InvalidValue.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Error\Parse.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Parser.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Value\Abstract.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Value\Container.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Value\Dictionary.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Value\Integer.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Value\List.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Value\String.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Concurrency\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Concurrency\Forker.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Config\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Config\Error\Missing.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Config\Interface.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Config\Simple.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Core.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\File\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\File\Error\NotExits.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\File\Error\Unreadable.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\File\File.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Logger\Blackhole.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Logger\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Logger\File.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Logger\Interface.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Persistence\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Persistence\Interface.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Persistence\Mysql.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Persistence\MysqlResult.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Persistence\ResetWhenForking.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Seeder\Client.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Seeder\Error.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Seeder\Error\CloseConnection.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Seeder\Error\Socket.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Seeder\Peer.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Seeder\Server.php" />
+    <Compile Include="PHPTracker-0.3\lib\PHPTracker\Torrent.php" />
+    <Compile Include="torrent-rw-master\Torrent.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="php-bittorrent-develop\" />
+    <Folder Include="php-bittorrent-develop\PHP\" />
+    <Folder Include="php-bittorrent-develop\PHP\BitTorrent\" />
+    <Folder Include="PHPTracker-0.3\" />
+    <Folder Include="PHPTracker-0.3\lib\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Bencode\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Error\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Bencode\Value\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Concurrency\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Config\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Config\Error\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\File\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\File\Error\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Logger\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Persistence\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Seeder\" />
+    <Folder Include="PHPTracker-0.3\lib\PHPTracker\Seeder\Error\" />
+    <Folder Include="torrent-rw-master\" />
+  </ItemGroup>
+</Project>
